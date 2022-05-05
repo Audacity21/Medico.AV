@@ -25,11 +25,9 @@ ROOT_PATH = os.path.dirname(__file__)
 SECRET_KEY = 'django-insecure-49lvr%-_^f*hd^e#1zzpr^cmrko1a3r4lxgr*+y%7x&1xk+8k('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['medico-av.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -151,6 +149,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 STATICFILES_DIRS = [os.path.join(ROOT_PATH, 'static')]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
