@@ -1,0 +1,25 @@
+{% extends 'dash.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4fe1c0aab7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>medico.av</title>
+    {% load static %}
+</head>
+<body>
+    {% block content %}
+    <div class="profile-container" style="position: relative; padding: 60px; margin-left: 300px; font-family: 'Fredoka', sans-serif;">
+      <div class="profile-title" style="margin-top: 40px; font-size: 28px; padding-bottom: 40px;">
+        <h3>Welcome to  Hospital search</h3>
+        <p style="color: rgb(91, 180, 196); font-size: 20px; margin-top: 40px;">Here you can search hospitals in your nearby areas.<br/> Zoom in and zoom out to extend the range.</p>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d61212.52544557968!2d80.62476636560493!3d16.486530075439447!3m2!1i1024!2i768!4f13.1!2m1!1shospitals!5e0!3m2!1sen!2sin!4v1651344426015!5m2!1sen!2sin" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  {% endblock content %}
+</body>
+</html>
