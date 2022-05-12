@@ -25,7 +25,7 @@ ROOT_PATH = os.path.dirname(__file__)
 SECRET_KEY = 'django-insecure-49lvr%-_^f*hd^e#1zzpr^cmrko1a3r4lxgr*+y%7x&1xk+8k('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['medico-av.herokuapp.com','localhost','127.0.0.1']
 
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'medico.wsgi.application'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-"""DATABASES = {  
+DATABASES = {  
     'default': {  
         'ENGINE': 'django.db.backends.mysql',  
         'NAME': 'customers',  
@@ -95,9 +95,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
         'HOST':'localhost',  
         'PORT':'3306'  
     }  
-}"""
+}
 
-DATABASES = {  
+"""DATABASES = {  
     'default': {  
        'ENGINE': 'django.db.backends.postgresql',
        'NAME': 'dd9cur8frn7rr8',
@@ -106,7 +106,7 @@ DATABASES = {
        'HOST': 'ec2-54-80-123-146.compute-1.amazonaws.com',
        'PORT': '5432',
     }  
-}
+}"""
 
 
 # Password validation
@@ -149,6 +149,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 STATICFILES_DIRS = [os.path.join(ROOT_PATH, 'static')]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
