@@ -17,13 +17,14 @@ def dp(request):
 
 @login_required()
 def result(request):
-    DATA_PATH = "diseasepredictor\Training.csv"
+    DATA_PATH = "diseasepredictor/Testing.csv"
     data = pd.read_csv(DATA_PATH).dropna(axis = 1)
     # Checking whether the dataset is balanced or not
     disease_counts = data["prognosis"].value_counts()
+    
     temp_df = pd.DataFrame({
         "Disease": disease_counts.index,
-        "Counts": disease_counts.values
+        "Counts": disease_counts.values,
     })
 
     # Encoding the target value into numerical
@@ -66,7 +67,7 @@ def result(request):
     final_rf_model.fit(X, y)
 
     # Reading the test data
-    test_data = pd.read_csv("diseasepredictor\Testing.csv").dropna(axis=1)
+    test_data = pd.read_csv("diseasepredictor/Testing.csv").dropna(axis=1)
 
     test_X = test_data.iloc[:, :-1]
     test_Y = encoder.transform(test_data.iloc[:, -1])
