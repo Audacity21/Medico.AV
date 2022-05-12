@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'medico.wsgi.application'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-DATABASES = {  
+"""DATABASES = {  
     'default': {  
         'ENGINE': 'django.db.backends.mysql',  
         'NAME': 'customers',  
@@ -95,9 +95,9 @@ DATABASES = {
         'HOST':'localhost',  
         'PORT':'3306'  
     }  
-}
+}"""
 
-"""DATABASES = {  
+DATABASES = {  
     'default': {  
        'ENGINE': 'django.db.backends.postgresql',
        'NAME': 'dd9cur8frn7rr8',
@@ -106,7 +106,7 @@ DATABASES = {
        'HOST': 'ec2-54-80-123-146.compute-1.amazonaws.com',
        'PORT': '5432',
     }  
-}"""
+}
 
 
 # Password validation
